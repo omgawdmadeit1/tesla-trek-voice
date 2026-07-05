@@ -8,26 +8,23 @@
     body { font-family: system-ui; background: #000; color: gold; text-align: center; padding: 40px; margin: 0; }
     h1 { font-size: 2.5em; }
     button { background: #111; color: gold; padding: 15px 30px; border: 3px solid gold; border-radius: 50px; font-size: 18px; cursor: pointer; margin: 10px; }
-    #voice { margin: 30px auto; width: 90%; max-width: 600px; background: #111; padding: 20px; border-radius: 15px; border: 3px solid gold; display: none; min-height: 400px; }
+    .box { margin: 30px auto; width: 90%; max-width: 600px; background: #111; padding: 30px; border-radius: 15px; border: 3px solid gold; }
   </style>
 </head>
 <body>
   <h1>🏴‍☠️ Tesla Trek - Fortune Cookie Hunts</h1>
   <p>Real Tesla + XYO + Live Pirate Voice Guide</p>
   
-  <button onclick="toggleVoice()">🦜 Talk to TrekGuide</button>
+  <button onclick="openVoice()">🦜 Talk to TrekGuide</button>
   <button onclick="window.location.reload()">Refresh Hunt</button>
   
-  <div id="voice">
-    <p>TrekGuide is ready — speak or type below.</p>
-    <!-- Replace this iframe src with your actual TrekGuide embed link from xAI -->
-    <iframe src="https://console.x.ai" style="width:100%; height:420px; border:none;" title="TrekGuide"></iframe>
+  <div class="box">
+    <p>TrekGuide is ready. Click the button to open the live voice pirate narrator.</p>
   </div>
 
   <script>
-    function toggleVoice() {
-      const panel = document.getElementById('voice');
-      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+    function openVoice() {
+      window.open('https://console.x.ai', '_blank');  // Replace with your direct TrekGuide link if available
     }
   </script>
 </body>
